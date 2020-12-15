@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_textbox5">
+
+    <ImageView
+        android:id="@+id/ivLineTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bottomsheet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+        android:id="@+id/calendar_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ivLineTop"
+        app:mcv_leftArrowMask="@drawable/ic_calendar_back"
+        app:mcv_rightArrowMask="@drawable/ic_calendar_next"
+        app:mcv_weekDayTextAppearance="@style/CalendarWeekday"
+        app:mcv_headerTextAppearance="@style/CalendarTitle"
+        app:mcv_monthLabels="@array/month_custom"
+        app:mcv_firstDayOfWeek="sunday"
+        app:mcv_weekDayLabels="@array/weekday_custom"
+        app:mcv_selectionMode="range"
+        app:mcv_selectionColor="@color/filter_selection"
+        app:mcv_showOtherDates="out_of_range"
+        app:mcv_tileSize="40dp" />
+
+    <ImageView
+        android:id="@+id/ivLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_line2"
+        app:layout_constraintStart_toStartOf="@+id/calendar_view"
+        app:layout_constraintTop_toBottomOf="@+id/calendar_view" />
+
+
+    <TextView
+        android:id="@+id/tvClause"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/filter_clause"
+        android:paddingLeft="8dp"
+        android:textSize="11sp"
+        android:textColor="@color/text_gray"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivLine" />
+
+    <RelativeLayout
+        android:id="@+id/rl_btn_show"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/ic_button_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvClause">
+
+        <TextView
+            android:id="@+id/tv_btn_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/opensans_regular"
+            android:text="@string/btn_select"
+            android:textColor="@color/active_dots"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

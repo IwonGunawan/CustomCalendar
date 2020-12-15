@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Custom Calendar</string>
+
+    <string-array name="weekday_custom">
+        <item>Mon</item>
+        <item>Tue</item>
+        <item>Wed</item>
+        <item>Thu</item>
+        <item>Fri</item>
+        <item>Sat</item>
+        <item>Sun</item>
+    </string-array>
+    <string-array name="month_custom">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+    <string name="filter_clause">Transaction History can be selected up to the last 6 months</string>
+    <string name="btn_select">Select</string>
+</resources>
